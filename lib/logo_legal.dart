@@ -9,7 +9,7 @@ class Logo_Legal extends StatelessWidget {
     // TODO: implement build
 
     final logo = Container(
-      margin: EdgeInsets.only(top: 10.0, left: 20.0, right: 130.0, bottom: 6.0),
+      margin: EdgeInsets.only(top: 10.0, left: 20.0, right: 40.0, bottom: 6.0),
       width: 80.0,
       height: 80.0,
       decoration: BoxDecoration(

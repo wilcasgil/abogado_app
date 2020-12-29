@@ -20,10 +20,11 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           actions: <Widget>[new Logo_Legal()],
           title: Text(
             "Legal Experts",
-            style: TextStyle(fontSize: 18.0), textAlign: TextAlign.center),
+            style: TextStyle(fontSize: 18.0)),
             //centerTitle = true,            
             backgroundColor: Colors.blue[900]
         ),
