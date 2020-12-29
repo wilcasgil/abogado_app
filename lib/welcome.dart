@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'button_one.dart';
 
 class Welcome extends StatelessWidget {
+  String title_welc = "¡Bienvenido a Legal Experts!";
+  String messaje_wel = "La guía en la que encontrarás el experto de la justicia que necesitas";
+  String copy_messaje = "Todos los derechos reservados - 2021";
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -10,17 +14,15 @@ class Welcome extends StatelessWidget {
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(top: 220.0, left: 20.0, right: 20.0),
-          child: Text(
-            "¡Bienvenido a Legal Experts!",
-            //"¡Bienvenido!",
-            //overflow: TextOverflow.fade,
-            style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontFamily: "Montserrat-Bold"),
-            textAlign: TextAlign.center
-          ),
+          child: Text(title_welc,
+              //"¡Bienvenido!",
+              //overflow: TextOverflow.fade,
+              style: TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontFamily: "Montserrat-Bold"),
+              textAlign: TextAlign.center),
         ),
       ],
     );
@@ -28,10 +30,10 @@ class Welcome extends StatelessWidget {
     final messaje_welcome = Container(
       margin: EdgeInsets.only(top: 220.0, left: 20.0, right: 20.0),
       child: Text(
-        "La guía en la que encontrarás el experto de la justicia que necesitas",
+        messaje_wel,
         style: TextStyle(
             fontSize: 25.0,
-            fontWeight: FontWeight.bold,
+            //fontWeight: FontWeight.bold,
             color: Colors.white,
             fontFamily: "Montserrat-Bold"),
         textAlign: TextAlign.justify,
@@ -41,12 +43,12 @@ class Welcome extends StatelessWidget {
     final messaje_copy = Container(
       margin: EdgeInsets.only(top: 230.0, left: 20.0, right: 20.0),
       child: Text(
-        "Todos los derechos reservados - 2021",
+        copy_messaje,
         style: TextStyle(
-            fontSize: 14.0,
+            fontSize: 12.0,
             //fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontFamily: "Montserrat-Bold"),
+            fontFamily: "Montserrat"),
         textAlign: TextAlign.center,
       ),
     );

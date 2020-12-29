@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome.dart';
+import 'logo_legal.dart';
 //import 'button_one.dart';
 
 void main() {
@@ -13,26 +14,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
+        fontFamily: "Montserrat",
         primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
         appBar: AppBar(
+          actions: <Widget>[new Logo_Legal()],
           title: Text(
             "Legal Experts",
-            style: TextStyle(fontFamily: 'Montserrat-Bold')),
+            style: TextStyle(fontSize: 18.0), textAlign: TextAlign.center),
+            //centerTitle = true,            
             backgroundColor: Colors.blue[900]
         ),
         body: new Welcome(),
