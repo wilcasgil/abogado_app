@@ -3,8 +3,11 @@ import 'button_one.dart';
 
 class Welcome extends StatelessWidget {
   String title_welc = "¡Bienvenido a Legal Experts!";
-  String messaje_wel = "La guía en la que encontrarás el experto de la justicia que necesitas";
+  String messaje_wel =
+      "La guía en la que encontrarás el experto de la justicia que necesitas";
   String copy_messaje = "Todos los derechos reservados - 2021";
+
+  //Welcome(this.title_welc, this.messaje_wel, this.copy_messaje);
 
   @override
   Widget build(BuildContext context) {

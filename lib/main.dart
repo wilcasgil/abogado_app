@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'welcome.dart';
 import 'logo_legal.dart';
+import 'gradient_back.dart';
 //import 'button_one.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent
+    )
+  );
   runApp(MyApp());
 }
 
@@ -12,27 +20,32 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: "Montserrat",
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          actions: <Widget>[new Logo_Legal()],
-          title: Text(
-            "Legal Experts",
-            style: TextStyle(fontSize: 18.0)),
-            //centerTitle = true,            
-            backgroundColor: Colors.blue[900]
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          fontFamily: "Montserrat",
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        body: new Welcome(),
-        //new ButtonOne("Navigate"),
-        backgroundColor: Colors.blue[900],        
-      )
-    );
+        home: Scaffold(
+          appBar: AppBar(
+              centerTitle: true,
+              actions: <Widget>[new Logo_Legal()],
+              title: Text("Legal Experts", style: TextStyle(fontSize: 18.0)),
+              //centerTitle = true,
+              backgroundColor: Colors.blue[900]),
+          body: Stack(
+            children: <Widget>[
+              ListView(
+                children: <Widget>[
+                  new Welcome(),
+                ],
+              ),
+              //new GradientBack()
+            ],
+          ),
+          //new ButtonOne("Navigate"),
+          backgroundColor: Colors.blue[900],
+        ));
   }
 }
 

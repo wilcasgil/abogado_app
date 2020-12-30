@@ -1,3 +1,4 @@
+import 'package:abogado_app/welcome.dart';
 import 'package:flutter/material.dart';
 
 class ButtonOne extends StatelessWidget {
@@ -22,7 +23,7 @@ class ButtonOne extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          buttonText,
+          buttonText,                  
           style: TextStyle(
               fontSize: 18.0, fontFamily: "Montserrat", color: Colors.white),
         ),
